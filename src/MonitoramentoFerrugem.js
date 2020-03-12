@@ -51,9 +51,17 @@ export default class MonitoramentoFerrugem extends Component {
 
     render() {
 
+        const { firstQuery } = this.state;
+
         return (
             <ScrollView style={{ backgroundColor: 'white' }}>
                 <View style={styles.container}>
+
+                    <Searchbar
+                        placeholder="Busca"
+                        onChangeText={query => { this.setState({ firstQuery: query }); }}
+                        value={firstQuery} 
+                    />
 
                     <View>
                         <List.Section>
@@ -181,16 +189,16 @@ export default class MonitoramentoFerrugem extends Component {
                                 </TouchableWithoutFeedback>
                                 <TouchableWithoutFeedback>
                                     <View style={styles.icones}>
-                                        <Text style={{fontWeight: 'bold', paddingRight: 70}}>Anotação de campo</Text>
-                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('AnotCampos')}>
+                                        <Text style={{fontWeight: 'bold', paddingRight: 70}}>Amostra de Monitoramento</Text>
+                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('')}>
                                             <FontAwesome name="eye" size={20} />
                                         </TouchableHighlight>                                       
                                     </View>
                                 </TouchableWithoutFeedback>
                                 <TouchableWithoutFeedback>
                                     <View style={styles.icones}>                                       
-                                    <Text style={{fontWeight: 'bold', paddingRight: 35}}>Nova Anotação de campo</Text>
-                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('NovaAnotCampo')}>
+                                    <Text style={{fontWeight: 'bold', paddingRight: 35}}>Nova Amostra de Monitoramento</Text>
+                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('NovaAmostra')}>
                                             <FontAwesome name="bug" size={20} />
                                         </TouchableHighlight> 
                                     </View>
@@ -322,16 +330,16 @@ export default class MonitoramentoFerrugem extends Component {
                                 </TouchableWithoutFeedback>
                                 <TouchableWithoutFeedback>
                                     <View style={styles.icones}>
-                                        <Text style={{fontWeight: 'bold', paddingRight: 70}}>Anotação de campo</Text>
-                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('AnotCampos')}>
+                                        <Text style={{fontWeight: 'bold', paddingRight: 70}}>Amostra de Monitoramento</Text>
+                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('')}>
                                             <FontAwesome name="eye" size={20} />
                                         </TouchableHighlight>                                       
                                     </View>
                                 </TouchableWithoutFeedback>
                                 <TouchableWithoutFeedback>
                                     <View style={styles.icones}>                                       
-                                    <Text style={{fontWeight: 'bold', paddingRight: 35}}>Nova Anotação de campo</Text>
-                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('NovaAnotCampo')}>
+                                    <Text style={{fontWeight: 'bold', paddingRight: 35}}>Nova Amostra de Monitoramento</Text>
+                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('NovaAmostra')}>
                                             <FontAwesome name="bug" size={20} />
                                         </TouchableHighlight> 
                                     </View>

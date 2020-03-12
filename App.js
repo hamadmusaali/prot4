@@ -1,6 +1,6 @@
 import { AppRegistry } from "react-native";
 import MonitoramentoFerrugem from './src/MonitoramentoFerrugem';
-import NovaAnotCampo from './src/NovaAnotCampo';
+import NovaAmostra from './src/NovaAmostra';
 import AnotCampos from './src/AnotCampos';
 import infoAnotCampos from './src/infoAnotCampos';
 
@@ -20,6 +20,13 @@ const Routes = createAppContainer(
         title: 'Monitoramento da Ferrugem'
       },
     },
+    NovaAmostra: {
+      screen: NovaAmostra,
+      navigationOptions: {
+        title: 'Nova Amostra de Monitoramento de Ferrugem'
+      },
+    },
+
   })
 );
 

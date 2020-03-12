@@ -10,7 +10,7 @@ import KeyboardShift from './Keyboard';
 
 const window = Dimensions.get('window');
 
-export default class NovaAnotCampo extends React.Component {
+export default class NovaAmostra extends React.Component {
 
     state = {
         desfolha: '',
