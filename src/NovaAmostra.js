@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, Picker, Button,Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, CheckBox, Button,Dimensions } from 'react-native';
 import { Container, Tab, Tabs } from 'native-base';
-import { CheckBox } from 'react-native-elements'
+//import { CheckBox } from 'react-native-elements'
 //import { Checkbox } from 'react-native-paper';
 import { FontAwesome } from "@expo/vector-icons";
 import CalendarPicker from 'react-native-calendar-picker';
@@ -103,15 +103,18 @@ export default class NovaAmostra extends React.Component {
 							
                             <TouchableWithoutFeedback>						
 								<View style={{ paddingTop: 30 }}>
-									<CheckBox
-										title='Click Here'
-										checked={this.state.checked}
-									/>	
-
-									<CheckBox
-										title='Click Here'
-										checked={this.state.checked}
-									/>
+									<View style={{ flexDirection: 'row' }}>
+										<CheckBox
+											checked={this.state.checked}
+										/>
+										<Text style={{marginTop: 5}}>Aplicou para Ferrugem Asiática?</Text>		
+									</View>
+									<View style={{ flexDirection: 'row' }}>
+										<CheckBox
+											checked={this.state.checked}
+										/>
+										<Text style={{marginTop: 5}}>Aplicou para Outras Doenças?</Text>		
+									</View>
 
 									<Text style={{ fontWeight: 'bold', paddingRight: 120, paddingTop: 30 }}>Data da Aplicação do Fungicida:</Text>
 									
