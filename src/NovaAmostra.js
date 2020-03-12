@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, Picker, Button,Dimensions } from 'react-native';
 import { Container, Tab, Tabs } from 'native-base';
-import { TextInput } from 'react-native-paper';
+import { CheckBox } from 'react-native-elements'
+//import { Checkbox } from 'react-native-paper';
 import { FontAwesome } from "@expo/vector-icons";
 import CalendarPicker from 'react-native-calendar-picker';
 import Dialog, { DialogContent } from 'react-native-popup-dialog';
@@ -21,7 +22,8 @@ export default class NovaAmostra extends React.Component {
         super(props);
         this.state = {
             selectedStartDate: null,
-            visible: false,
+			visible: false,
+			checked: false,
         };
         this.onDateChange = this.onDateChange.bind(this);
     }
@@ -32,6 +34,7 @@ export default class NovaAmostra extends React.Component {
         });
     }
     render() {
+		//const { checked } = this.state;
         const { selectedStartDate } = this.state;
         const startDate = selectedStartDate ? selectedStartDate.toString() : '';
 
@@ -51,12 +54,12 @@ export default class NovaAmostra extends React.Component {
                                 <View style={{paddingTop:20}}>
                                     <Text style={{ fontWeight: 'bold', paddingRight: 120 }}>Data da coleta:</Text>
                                     
-                                        <CalendarPicker
-                                            onDateChange={this.onDateChange}
-                                        />
-                                        <View>
-                                            <Text>Data selecionada:{startDate}</Text>
-                                        </View>
+                                    <CalendarPicker
+                                    	onDateChange={this.onDateChange}
+                                    />
+                                    <View>
+                                        <Text>Data selecionada:{startDate}</Text>
+                                    </View>
                                 </View>
                             </TouchableWithoutFeedback>
 
@@ -99,8 +102,22 @@ export default class NovaAmostra extends React.Component {
 							</View>
 							
                             <TouchableWithoutFeedback>						
-							<View>								
-								
+								<View style={{ paddingTop: 30 }}>
+									<CheckBox
+										title='Click Here'
+										checked={this.state.checked}
+									/>	
+
+									<CheckBox
+										title='Click Here'
+										checked={this.state.checked}
+									/>
+
+									<Text style={{ fontWeight: 'bold', paddingRight: 120, paddingTop: 30 }}>Data da Aplicação do Fungicida:</Text>
+									
+									<CalendarPicker
+                                    	onDateChange={this.onDateChange}
+                                    />
 							    </View>						
 							</TouchableWithoutFeedback>
                             </View>
