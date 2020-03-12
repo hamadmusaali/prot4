@@ -190,7 +190,7 @@ export default class MonitoramentoFerrugem extends Component {
                                 <TouchableWithoutFeedback>
                                     <View style={styles.icones}>
                                         <Text style={{fontWeight: 'bold', paddingRight: 70}}>Amostra de Monitoramento</Text>
-                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('')}>
+                                        <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('x')}>
                                             <FontAwesome name="eye" size={20} />
                                         </TouchableHighlight>                                       
                                     </View>

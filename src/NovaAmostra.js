@@ -70,22 +70,7 @@ export default class NovaAmostra extends React.Component {
                                         onValueChange={(itemValue, itemIndex) =>
                                             this.setState({ language: itemValue })
                                         }>
-                                        <Picker.Item label="V1" value="V1" />
-                                        <Picker.Item label="V2" value="V2" />
-                                        <Picker.Item label="V3" value="V3" />
-                                        <Picker.Item label="V4" value="V4" />
-                                        <Picker.Item label="V5" value="V5" />
-                                        <Picker.Item label="V6" value="V6" />
-                                        <Picker.Item label="R1" value="R1" />
-                                        <Picker.Item label="R2" value="R2" />
-                                        <Picker.Item label="R3" value="R3" />
-                                        <Picker.Item label="R4" value="R4" />
-                                        <Picker.Item label="R4_R5" value="R4_R5" />
-                                        <Picker.Item label="R5_R1" value="R5_R1" />
-                                        <Picker.Item label="R5_R2" value="R5_R2" />
-                                        <Picker.Item label="R5_R3" value="R5_R3" />
-                                        <Picker.Item label="R5_R4" value="R5_R4" />
-                                        <Picker.Item label="R5_5_R6" value="R5_5_R6" />
+                                    
                                     </Picker>
                                 </View>
                             </TouchableWithoutFeedback>

@@ -1,8 +1,6 @@
 import { AppRegistry } from "react-native";
 import MonitoramentoFerrugem from './src/MonitoramentoFerrugem';
 import NovaAmostra from './src/NovaAmostra';
-import AnotCampos from './src/AnotCampos';
-import infoAnotCampos from './src/infoAnotCampos';
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
