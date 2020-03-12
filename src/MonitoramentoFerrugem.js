@@ -199,7 +199,7 @@ export default class MonitoramentoFerrugem extends Component {
                                     <View style={styles.icones}>                                       
                                     <Text style={{fontWeight: 'bold', paddingRight: 35}}>Nova Amostra de Monitoramento</Text>
                                         <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('NovaAmostra')}>
-                                            <FontAwesome name="bug" size={20} />
+                                            <FontAwesome name="leaf" size={20} />
                                         </TouchableHighlight> 
                                     </View>
                                 </TouchableWithoutFeedback>
@@ -340,7 +340,7 @@ export default class MonitoramentoFerrugem extends Component {
                                     <View style={styles.icones}>                                       
                                     <Text style={{fontWeight: 'bold', paddingRight: 35}}>Nova Amostra de Monitoramento</Text>
                                         <TouchableHighlight style={{ color: "gray" }} onPress={() => this.props.navigation.navigate('NovaAmostra')}>
-                                            <FontAwesome name="bug" size={20} />
+                                            <FontAwesome name="leaf" size={20} />
                                         </TouchableHighlight> 
                                     </View>
                                 </TouchableWithoutFeedback>

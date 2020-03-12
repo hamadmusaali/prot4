@@ -45,7 +45,7 @@ export default class NovaAmostra extends React.Component {
                     <Tab heading="Step 1">
                         <View style={styles.container}>                          
                             <Text style={{ fontWeight: 'bold', fontSize: 15, padding: 5, color: 'skyblue' }}>UR: Bortoldo</Text>
-                            <Text style={{ fontSize: 18, padding: 3}}> Dados de amostragem </Text>
+                            <Text style={{ fontSize: 18, padding: 3}}> Data da Coleta </Text>
 
                             <TouchableWithoutFeedback>
                                 <View style={{paddingTop:20}}>
@@ -60,65 +60,17 @@ export default class NovaAmostra extends React.Component {
                                 </View>
                             </TouchableWithoutFeedback>
 
-                            <TouchableWithoutFeedback>
-                                <View style={{flexDirection: 'row'}}>
-                                    <Text style={{padding: 15, marginRight: 30, fontWeight: 'bold'}}>Estádio da cultura:</Text>
-                                    <Picker
-                                        style={styles.icones}
-                                        selectedValue={this.state.language}
-                                        style={{ height: 50, width: 100, marginLeft: 25 }}
-                                        onValueChange={(itemValue, itemIndex) =>
-                                            this.setState({ language: itemValue })
-                                        }>
-                                    
-                                    </Picker>
-                                </View>
-                            </TouchableWithoutFeedback>
-							<TouchableWithoutFeedback>
-                                <View style={{flexDirection: 'row'}}>
-                                    <Text style={{padding: 15, fontWeight: 'bold'}}>% de Desfolha (em números inteiros):</Text>
-                                    <TextInput style={styles.inputD}
-									placeholder="0,00%" value={this.state.desfolha}
-									onChangeText={(desfolha) => this.setState({ desfolha })}
-									keyboardType = 'numeric' maxLength={5} />
-                                </View>
-                            </TouchableWithoutFeedback>
                         </View>
                         </Tab>
 												
                         <Tab heading="Step 2">   
                         <View style={styles.container}>
 							<Text style={{ fontWeight: 'bold', fontSize: 15, padding: 5, color: 'skyblue' }}>UR: Bortoldo</Text>
-                            <Text style={{ fontSize: 18, padding: 3}}> Flutuação das Pragas </Text>
-							<Text style={{ fontSize: 13, padding: 3}}> Insetos Pragas (Informe a média encontrada) </Text>
+                            <Text style={{ fontSize: 18, padding: 3}}> Dados no Coletor de Esporos </Text>
+							
                             <TouchableWithoutFeedback>						
-							<View>								
-								<TextInput
-								  label="Lagarta Da Soja (Anticarsia Gemmtalis)"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Falsa Madideira (Chrysodeixis spp.)"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Lagarta Das Vagens (Spodoptera spp.)"
-								  style={styles.input}
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Grupo Heliothinae"
-								  style={styles.input}
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
+								<View>								
+								
 							    </View>						
 							</TouchableWithoutFeedback>
                             </View>
@@ -127,24 +79,11 @@ export default class NovaAmostra extends React.Component {
 						<Tab heading="Step 3">   
                         <View style={styles.container}>
 							<Text style={{ fontWeight: 'bold', fontSize: 15, padding: 5, color: 'skyblue' }}>UR: Bortoldo</Text>							
-                            <Text style={{ fontSize: 18, padding: 3}}> Doenças das Pragas </Text>
-							<Text style={{ fontSize: 13, padding: 3}}> Insetos Pragas (Informe a média encontrada) </Text>
+                            <Text style={{ fontSize: 18, padding: 3}}> Dados na Inspeção Foliar </Text>
+							
                             <TouchableWithoutFeedback>						
 							<View>								
-								<TextInput
-								  label="Lagarta c/ Nomura rileyi (Doença Branca)"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Lagarta c/ Baculovírus (Doença Preta)"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
+								
 							    </View>						
 							</TouchableWithoutFeedback>
                             </View>
@@ -155,68 +94,13 @@ export default class NovaAmostra extends React.Component {
 							<Text style={{ fontWeight: 'bold', fontSize: 15, padding: 5, color: 'skyblue' }}>UR: Bortoldo</Text>
 							<View style={{flexDirection: 'row'}}>
 							<Button title="Cancel" color="gray" />
-                            <Text style={{ fontSize: 18, paddingRight: 30, paddingLeft: 30}}> Inimigos Naturais </Text>
+                            <Text style={{ fontSize: 18, paddingRight: 5, paddingLeft: 5}}> Dados Aplicação Fungicidas</Text>
 							<Button title="Save" color="green"/>
 							</View>
-							<Text style={{ fontSize: 13, padding: 3}}> Insetos Pragas (Informe a média encontrada) </Text>
+							
                             <TouchableWithoutFeedback>						
 							<View>								
-								<TextInput
-								  label="Calosoma Granulatum"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Callida Sp."
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Callida Scutellaris"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Lebia Concina"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Eriopsis Connexa"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Cycloneda Sanguinea"
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Podius Sp."
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric' maxLength={5}
-								/>
-								<TextInput
-								  label="Podius Sp."
-								  style={styles.input}
-								  returnKeyType='next'
-								  placeholder="0,00"
-								  keyboardType = 'numeric'maxLength={5}
-								/>
+								
 							    </View>						
 							</TouchableWithoutFeedback>
                             </View>
