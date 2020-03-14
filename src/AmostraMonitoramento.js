@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { List } from 'react-native-paper';
 
-export default class AnotCampos extends Component {
+export default class AmostraMonitoramento extends Component {
     
     constructor(props) {
         super(props);
@@ -27,21 +27,19 @@ export default class AnotCampos extends Component {
                 
                     <View>
 
-                        <Text style={styles.titulo}>Amostras coletadas</Text>
-
                         <List.Section>
                             <List.Accordion
                                 title="18-10-2019"
                                 style={{padding:0}}
                                 left={props => <List.Icon {...props} icon="table" />}
-                                onPress={() => this.props.navigation.navigate('infoAnotCampos')} 
+                                onPress={() => this.props.navigation.navigate('')} 
                             />
                             
                             <List.Accordion
                                 title="22-10-2019"
                                 style={{padding:0}}
                                 left={props => <List.Icon {...props} icon="table" />}
-                                onPress={() => this.props.navigation.navigate('infoAnotCampos')} 
+                                onPress={() => this.props.navigation.navigate('')} 
                             />
                                 
                         </List.Section>
