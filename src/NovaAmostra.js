@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, Button, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, Button, Dimensions, Picker } from 'react-native';
 import { Container, Tab, Tabs } from 'native-base';
 import { CheckBox } from 'react-native-elements'
 //import { Checkbox } from 'react-native-paper';
@@ -7,9 +7,17 @@ import { FontAwesome } from "@expo/vector-icons";
 import CalendarPicker from 'react-native-calendar-picker';
 import Dialog, { DialogContent } from 'react-native-popup-dialog';
 import KeyboardShift from './Keyboard';
+import data1 from '../json/teste.json';
+import Select2 from 'react-native-select-two';
 
 
 const window = Dimensions.get('window');
+
+const mockData = [
+    { id: 1, name: 'React Native Developer' },
+    { id: 2, name: 'Android Developer' },
+    { id: 3, name: 'iOS Developer' }
+];
 
 export default class NovaAmostra extends React.Component {
 
@@ -35,6 +43,12 @@ export default class NovaAmostra extends React.Component {
     }
 
     render() {
+
+        const userList = {
+            "123":"Tom",
+            "124":"Michael",
+            "125":"Christin"
+          }
 		
         const { selectedStartDate } = this.state;
         const startDate = selectedStartDate ? selectedStartDate.toString() : '';
@@ -86,9 +100,39 @@ export default class NovaAmostra extends React.Component {
                             <Text style={{ fontSize: 18, padding: 3}}> Dados na Inspeção Foliar </Text>
 							
                             <TouchableWithoutFeedback>						
-							<View>								
-								
-							    </View>						
+                                <View style={{flexDirection: 'column'}}>
+                                    <Text style={{padding: 15, marginRight: 30, fontWeight: 'bold'}}>Estádio das plantas:</Text>
+                                    <Picker
+                                        style={styles.icones}
+                                        selectedValue={this.state.language}
+                                        style={{ height: 50, width: 100, marginLeft: 25 }}
+                                        onValueChange={(itemValue, itemIndex) =>
+                                            this.setState({ language: itemValue })
+                                        }>
+                                        <Picker.Item label="V1" value="V1" />
+                                        <Picker.Item label="V2" value="V2" />
+                                        <Picker.Item label="V3" value="V3" />
+                                        <Picker.Item label="V4" value="V4" />
+                                        <Picker.Item label="V5" value="V5" />
+                                            
+                                        
+                                    </Picker>
+
+                                    <Select2
+                                        isSelectSingle
+                                        style={{ borderRadius: 5 }}
+                                        colorTheme={'blue'}
+                                        popupTitle='Select item'
+                                        title='Select item'
+                                        data={mockData}
+                                        onSelect={data => {
+                                            this.setState({ data });
+                                        }}
+                                        onRemoveItem={data => {
+                                            this.setState({ data });
+                                        }} 
+                                    />
+                                </View>						
 							</TouchableWithoutFeedback>
                             </View>
                         </Tab>
