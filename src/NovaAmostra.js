@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, CheckBox, Button,Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableWithoutFeedback, Button, Dimensions } from 'react-native';
 import { Container, Tab, Tabs } from 'native-base';
-//import { CheckBox } from 'react-native-elements'
+import { CheckBox } from 'react-native-elements'
 //import { Checkbox } from 'react-native-paper';
 import { FontAwesome } from "@expo/vector-icons";
 import CalendarPicker from 'react-native-calendar-picker';
@@ -15,7 +15,8 @@ export default class NovaAmostra extends React.Component {
 
     state = {
         desfolha: '',
-        text: ''
+        text: '',
+        checked: false,
     }
 
     constructor(props) {
@@ -23,7 +24,6 @@ export default class NovaAmostra extends React.Component {
         this.state = {
             selectedStartDate: null,
 			visible: false,
-			checked: false,
         };
         this.onDateChange = this.onDateChange.bind(this);
     }
@@ -33,8 +33,9 @@ export default class NovaAmostra extends React.Component {
             selectedStartDate: date,
         });
     }
+
     render() {
-		//const { checked } = this.state;
+		
         const { selectedStartDate } = this.state;
         const startDate = selectedStartDate ? selectedStartDate.toString() : '';
 
@@ -103,17 +104,18 @@ export default class NovaAmostra extends React.Component {
 							
                             <TouchableWithoutFeedback>						
 								<View style={{ paddingTop: 30 }}>
-									<View style={{ flexDirection: 'row' }}>
-										<CheckBox
-											checked={this.state.checked}
-										/>
-										<Text style={{marginTop: 5}}>Aplicou para Ferrugem Asiática?</Text>		
-									</View>
-									<View style={{ flexDirection: 'row' }}>
-										<CheckBox
-											checked={this.state.checked}
-										/>
-										<Text style={{marginTop: 5}}>Aplicou para Outras Doenças?</Text>		
+									<View >
+                                        <CheckBox
+                                            title="Aplicou para Ferrugem Asiática?"
+                                            checked={this.state.checked}
+                                            onPress={() => this.setState({ checked: !this.state.checked })}
+                                        />			
+									
+                                        <CheckBox
+                                            title="Aplicou para Outras Doenças?"
+                                            checked={this.state.checked}
+                                            onPress={() => this.setState({ checked: !this.state.checked })}
+                                        />		
 									</View>
 
 									<Text style={{ fontWeight: 'bold', paddingRight: 120, paddingTop: 30 }}>Data da Aplicação do Fungicida:</Text>
